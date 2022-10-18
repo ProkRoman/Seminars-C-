@@ -2,7 +2,7 @@
 // 3 -> Среда
 // 5 -> Пятница
 
-Console.Write("Введите номер: ");
+Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 if (a > 0 && a < 8)
