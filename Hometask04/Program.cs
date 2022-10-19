@@ -3,3 +3,13 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
+Console.Write("Введите число №1: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число №2: ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число №3: ");
+int c = Convert.ToInt32(Console.ReadLine());
+
+if (a > b & a > c) Console.WriteLine($"{a}");
+if (b > a & b > c) Console.WriteLine($"{b}");
+if (c > a & c > b) Console.WriteLine($"{c}");
