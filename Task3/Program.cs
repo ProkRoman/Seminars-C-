@@ -6,4 +6,14 @@ Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 if (a < 1)
-Console.WriteLine
+Console.WriteLine("Недопустимое число");
+
+else
+{
+    int count = -a;
+    while (count <= a)
+    {
+       Console.Write($"{count}, ");
+       count++; 
+    }
+}
