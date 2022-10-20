@@ -6,10 +6,10 @@ Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 
-for (int i = 0; i <= a; i++)
+for (int i = 0; i <= a;i++)
 {
-    if (a % 2 == 0) ;
+    // if (a % 2 == 0) 
     {
-        Console.Write("{0}", i++);
+        Console.Write("{0}, ", i++);
     }
 }
