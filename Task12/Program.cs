@@ -16,6 +16,7 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 // }
 
 // bool multiple = Multiple(num1, num2);
+//Console.WriteLine(mulple ? "Кратно" : $"не кратно, остаток {number1 % number2}");
 
 int Multiple(int number1, int number2)
 {
