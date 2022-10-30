@@ -12,9 +12,11 @@ string Quarter(int number)
     if (number == 2) return "x < 0 и y > 0";
     if (number == 3) return "x < 0 и y < 0";
     if (number == 4) return "x > 0 и y < 0";
-    return "Некорректный ввод";
+    return null;
 }
 
 string quarter = Quarter(num);
 
-Console.WriteLine($"Диапазон:{quarter}");
+Console.WriteLine(quarter == null
+? "Некорректный номер четверти"
+: $"Диапазон: {quarter}");
