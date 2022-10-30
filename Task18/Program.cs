@@ -2,24 +2,19 @@
 // показывает диапазон возможных координат (x,y)
 
 
-Console.WriteLine("Введите координаты точки ");
-Console.Write("X; ");
-int x = Convert.ToInt32(Console.ReadLine());
-Console.Write("Y; ");
-int y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите номер четверти ");
+int num = Convert.ToInt32(Console.ReadLine());
 
-int Quarter(int xc, int yc)
+
+string Quarter(int number)
 {
-    if (xc > 0 && yc > 0) return 1;
-    if (xc < 0 && yc > 0) return 2;
-    if (xc < 0 && yc < 0) return 3;
-    if (xc > 0 && yc < 0) return 4;
-
-    return 0;
+    if (number == 1) return "x > 0 и y > 0";
+    if (number == 2) return "x < 0 и y > 0";
+    if (number == 3) return "x < 0 и y < 0";
+    if (number == 4) return "x > 0 и y < 0";
+    return "Некорректный ввод";
 }
 
-int quarter = Quarter(x, y);
-string result = quarter > 0
-                ? $"Указанные координаты соответствуют четверти -> {quarter}"
-                : "Введены некоректные координаты";
-Console.WriteLine(result);
+string quarter = Quarter(num);
+
+Console.WriteLine($"Диапазон:{quarter}");
