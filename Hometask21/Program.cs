@@ -2,29 +2,31 @@
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
-int x1 = Coordinate("x", "A");
-int y1 = Coordinate("y", "A");
-int z1 = Coordinate("z", "A");
-int x2 = Coordinate("x", "B");
-int y2 = Coordinate("y", "B");
-int z2 = Coordinate("z", "B");
+Console.WriteLine("Введите координаты точки A ");
+Console.Write("X1; ");
+int x1 = Convert.ToInt32(Console.ReadLine());
 
-int Coordinate(string coorName, string pointName)
+Console.Write("Y1; ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Z1; ");
+int z1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите координаты точки B ");
+Console.Write("X2; ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Y2; ");
+int y2 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Z2; ");
+int z2 = Convert.ToInt32(Console.ReadLine());
+
+double distance = Distance(x1, x2, y1, y2, z1, z2);
+Console.WriteLine(Math.Round(distance, 2, MidpointRounding.ToZero));
+
+double Distance(int a1, int a2, int b1, int b2, int c1, int c2)
 {
-    Console.Write($"Введите координату {coorName} точки {pointName}: ");
-    return Convert.ToInt16(Console.ReadLine());
+    double dist = Math.Sqrt((a1 - a2) * (a1 - a2) + (b1 - b2) * (b1 - b2)+(c1 - c2) * (c1 - c2));
+    return dist;
 }
-
-double Decision(double x1, double x2,
-                double y1, double y2,
-                double z1, double z2)
-{
-    return Math.Sqrt(Math.Pow((x2 - x1), 2) +
-                     Math.Pow((y2 - y1), 2) +
-                     Math.Pow((z2 - z1), 2));
-}
-
-double segmentLength = Math.Round(Decision(x1, x2, y1, y2, z1, z2), 2);
-
-Console.WriteLine($"Длина отрезка  {segmentLength}");
-
