@@ -4,7 +4,7 @@
 // 12821 -> да
 
 Console.Write("Введите пятизначное число: ");
-string? number = Console.ReadLine();
+string number = Console.ReadLine();
 
 void CheckingNumber(string number)
 {
