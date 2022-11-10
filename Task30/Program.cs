@@ -5,18 +5,30 @@
 //  [1,0,1,1,0,1,0,0]
 
 
+int[] CreateArray(int len)
+{
+    int[] arr = new int[len];
+    Random rnd = new Random();
+    for (int i = 0; i < len; i++)
+    {
+        arr[i] = new Random().Next(0, 2);
+    }
+    return arr;
+}
+
 
 void PrintArray(int[] arr)
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i]= new Random().Next(0,2);
-        if (i!=arr.Length -1)Console.Write($"{arr[i]}, ");
-        else Console.Write($"{arr[i]},");
+        Console.Write(arr[i]);
+        if (i < arr.Length - 1) Console.Write(",");
     }
     Console.Write("]");
 }
 
-int [] array = new int[8];
+Console.Write("Введите количество элементов массива: ");
+int length = Convert.ToInt32(Console.ReadLine());
+int[] array = CreateArray(length);
 PrintArray(array);
