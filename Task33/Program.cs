@@ -34,9 +34,11 @@ bool FindNumberArray(int[] array, int number)
     return false;
 }
 
-int[] arr = CreateArrayRndInt(12, -99, 100);
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+int[] arr = CreateArrayRndInt(12, -6, 7);
 PrintArray(arr);
-bool result = FindNumberArray(arr, 5);
+bool result = FindNumberArray(arr, num);
 
 
 Console.WriteLine(result ? "Да" : "Нет");
